@@ -1,0 +1,63 @@
+:root {
+  --color-main: #333;
+  --color-border: #999;
+  --color-input-bg: #f2f2f2;
+  --color-inputbtn-bg: #6b98f8;
+}
+
+input[type=text] {
+	padding: 5px 10px;
+	font-size: 86%;
+	border: none;
+	border-radius: 3px;
+	background: var(--color-input-bg);
+}
+
+input[name=confirm],
+input[name=submit],
+input[name=back] {
+	margin-top: 10px;
+	padding: 5px 20px;
+	font-size: 100%;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	border-radius: 3px;
+	background: var(--color-inputbtn-bg)
+}
+
+input[name=back] {
+	margin-right: 20px;
+	box-shadow: 0 3px 0 #777;
+	background: #999;
+}
+
+.index {
+  color: var(--color-main);
+}
+
+.index .title {
+	margin-bottom: 20px;
+	padding: 20px 0;
+	font-size: 122%;
+	border-top: 1px solid var(--color-border);
+	border-bottom: 1px solid var(--color-border);
+}
+
+.index .element_wrap {
+	padding: 10px 0;
+	text-align: left;
+}
+
+.index .element_wrap label {
+	display: inline-block;
+	margin-bottom: 10px;
+	font-weight: bold;
+	width: 150px;
+}
+
+.index .element_wrap .element_wrap p {
+	display: inline-block;
+	margin:  0;
+	text-align: left;
+}
