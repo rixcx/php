@@ -2,15 +2,19 @@
 const path = require('path');
 //MiniCssExtractPlugin の読み込み
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const WebpackFixStyleOnlyEntries = require("webpack-fix-style-only-entries"); //jsを吐き出さない
  
 module.exports = {
  
   //エントリポイント（デフォルトと同じなので省略可）
-  entry: './src/index.js',  
+  entry: {
+    "style": './src/style.scss',
+    "admin/style": './src/admin/style.scss'
+  },
   //出力先（デフォルトと同じなので省略可）
   output: { 
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+  //  filename: '[name].js', 
+    path: path.resolve('../','webroot','css'),
   },
   module: {
     rules: [
@@ -27,11 +31,12 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       // 抽出する CSS のファイル名
-      filename: 'style.css',
+      filename: './[name].css',
     }),
+    new WebpackFixStyleOnlyEntries()
   ],
   //source-map タイプのソースマップを出力
-  devtool: 'source-map',
+  // devtool: 'source-map',
   // node_modules を監視（watch）対象から除外
   watchOptions: {
     ignored: /node_modules/  //正規表現で指定

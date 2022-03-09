@@ -1,1 +1,0 @@
-{"version":3,"file":"style.css","mappings":"AAGA,EACE,eACA,WALY,CAMZ,wBALa,C","sources":["webpack://webpack/./src/style.scss"],"sourcesContent":["$color_green: green;\n$color_yellow: rgb(255, 255, 205);\n \np {\n  font-size: 20px;\n  color: $color_green;\n  background-color: $color_yellow;\n}"],"names":[],"sourceRoot":""}
